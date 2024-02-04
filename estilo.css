@@ -1,0 +1,45 @@
+header{
+    height: 300px;
+    background-color: aqua;
+}
+
+main{
+    height: 300px;
+    background-color: black;
+}
+
+footer{
+    height: 300px;
+    width: 300px;
+    background-color: red;
+}
+
+footer:hover .tarjeta{
+    visibility: visible;
+    transition: all 0.7s ease;
+    transform: rotate(0);
+}
+
+.tarjeta{
+    background-color: azure;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    transition: all 0.3s; 
+
+}
+
+.imagen{
+    box-shadow: 0 4px 8px black;
+    transform: rotate(-20deg)
+}
+
+.giratarjeta{
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+footer:hover .tarjeta .giratarjeta {
+    opacity: 1;
+  }
