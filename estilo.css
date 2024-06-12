@@ -1,45 +1,49 @@
-header{
-    height: 300px;
-    background-color: aqua;
+body{
+    flex: auto;
 }
 
-main{
-    height: 300px;
-    background-color: black;
+.colocarTarjeta{
+    text-align: right;
 }
 
 footer{
+    background-color: greenyellow;
     height: 300px;
-    width: 300px;
-    background-color: red;
-}
-
-footer:hover .tarjeta{
-    visibility: visible;
-    transition: all 0.7s ease;
-    transform: rotate(0);
+    margin-top: 35%;
 }
 
 .tarjeta{
-    background-color: azure;
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 0px;
+    right: 20px;
+    width: 300px;
     visibility: hidden;
-    transition: all 0.3s; 
+    transition: all 0.3s ease;
+}
 
+footer:hover .tarjeta{
+    right: 100px;
+    visibility: visible;
+    transition: all 0.7s ease;
 }
 
 .imagen{
     box-shadow: 0 4px 8px black;
-    transform: rotate(-20deg)
+    transform: rotate(-20deg);
+    transition: all 0.7s ease;
 }
 
-.giratarjeta{
-    opacity: 0;
-    transition: opacity 0.7s ease;
+.imagen:hover{
+    transform: rotate(-20deg);
+    transition: all 0.7s ease;
+    animation: rotarImg 2s linear infinite;
 }
 
-footer:hover .tarjeta .giratarjeta {
-    opacity: 1;
-  }
+@keyframes rotarImg {
+    from {
+        transform: rotate(-20deg) rotateY(0deg);
+    }
+    to {
+        transform: rotate(-20deg) rotateY(180deg);
+    }
+}
